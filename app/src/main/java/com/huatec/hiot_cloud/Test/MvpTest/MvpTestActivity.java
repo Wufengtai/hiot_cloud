@@ -9,15 +9,22 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.huatec.hiot_cloud.R;
+import com.huatec.hiot_cloud.Test.MvpTest.dagger2test.DaggerPersenterComponent;
+import com.huatec.hiot_cloud.Test.MvpTest.dagger2test.PersenterComponent;
 import com.huatec.hiot_cloud.Test.MvpTest.modle.User;
 import com.huatec.hiot_cloud.base.EaesActivity;
 
-public class MvpTestActivity extends EaesActivity<TestView, TestPresenter> implements TestView{
+import javax.inject.Inject;
 
-    private TestPresenter presenter;
+public class MvpTestActivity extends EaesActivity<TestView, TestPresenter> implements TestView{
+   /*
+   * 调用@inject类
+   * */
+    @Inject
+    TestPresenter presenter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        presenter = new TestPresenter();
+        getComponent().inject(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mvp_test);
        final EditText evpassword = findViewById(R.id.ev_passworld);
@@ -43,6 +50,10 @@ public class MvpTestActivity extends EaesActivity<TestView, TestPresenter> imple
     public TestPresenter createPresenter() {
         return presenter;
     }
-
-
+/*
+* 创建注入器
+* */
+    public PersenterComponent getComponent(){
+        return DaggerPersenterComponent.builder().build();
+    }
 }
