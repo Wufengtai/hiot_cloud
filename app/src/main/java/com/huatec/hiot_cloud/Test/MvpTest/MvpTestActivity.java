@@ -24,7 +24,7 @@ public class MvpTestActivity extends EaesActivity<TestView, TestPresenter> imple
     TestPresenter presenter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        getComponent().inject(this);
+        getActivityComponent().inject(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mvp_test);
        final EditText evpassword = findViewById(R.id.ev_passworld);
@@ -52,8 +52,8 @@ public class MvpTestActivity extends EaesActivity<TestView, TestPresenter> imple
     }
 /*
 * 创建注入器
-* */
+* *//*
     public PersenterComponent getComponent(){
         return DaggerPersenterComponent.builder().build();
-    }
+    }*/
 }
