@@ -10,18 +10,20 @@ import android.widget.Toast;
 
 import com.huatec.hiot_cloud.R;
 import com.huatec.hiot_cloud.Test.MvpTest.modle.User;
+import com.huatec.hiot_cloud.base.EaesActivity;
 
-public class MvpTestActivity extends AppCompatActivity implements TestView{
+public class MvpTestActivity extends EaesActivity<TestView, TestPresenter> implements TestView{
 
+    private TestPresenter presenter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        presenter = new TestPresenter();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mvp_test);
        final EditText evpassword = findViewById(R.id.ev_passworld);
        final EditText evusername = findViewById(R.id.ev_username);
         Button bin = findViewById(R.id.bin);
         final User user = new User();
-        final TestPresenter presenter = new TestPresenter(this);
         bin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -33,9 +35,14 @@ public class MvpTestActivity extends AppCompatActivity implements TestView{
         });
     }
 
-
     @Override
-    public void shoumessage(String msg) {
+    public void ShowMessage(String msg) {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
+    @Override
+    public TestPresenter createPresenter() {
+        return presenter;
+    }
+
+
 }
