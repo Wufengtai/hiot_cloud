@@ -1,8 +1,7 @@
-package com.huatec.hiot_cloud.base;
+package com.huatec.hiot_cloud.UI.base;
 
 import android.app.Application;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,7 +16,7 @@ import com.huatec.hiot_cloud.injection.module.ActivityModule;
 * 基类的Activity
 * */
 //V对应baseView
-public abstract class EaesActivity<V extends baseView , P extends BasePresenter > extends AppCompatActivity implements baseView {
+public abstract class EaesActivity<V extends baseView , P extends BasePresenter<V> > extends AppCompatActivity implements baseView {
     private P presenter;
     /*
     * 活动注入器
@@ -26,12 +25,16 @@ public abstract class EaesActivity<V extends baseView , P extends BasePresenter 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        injectIndependies();
         presenter = createPresenter();
-        presenter.setView(this);
+        if (presenter !=null) {
+            presenter.setView((V) this);
+        }
     }
 
     //抽象类
     public abstract P createPresenter();
+    public abstract void injectIndependies();
   //重写onDestroy方法
     @Override
     protected void onDestroy() {

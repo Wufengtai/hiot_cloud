@@ -1,19 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    tools:context=".UI.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/VR_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:background="@color/app_bg"
+        android:orientation="horizontal"
+        >
+        <RadioGroup
+            android:id="@+id/RG_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            >
+            <RadioButton
+                android:id="@+id/RB_but1"
+                style="@style/MainButton"
+                android:drawableTop="@drawable/main_label_equipment"
+                android:text="设备" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <RadioButton
+                android:id="@+id/RB_but2"
+                style="@style/MainButton"
+                android:drawableTop="@drawable/main_label_message"
+                android:text="消息" />
+
+            <RadioButton
+                android:id="@+id/RB_but3"
+                style="@style/MainButton"
+                android:drawableTop="@drawable/main_label_scene"
+                android:text="服务器" />
+
+            <RadioButton
+                android:id="@+id/RB_but4"
+                style="@style/MainButton"
+                android:drawableTop="@drawable/main_label_mine"
+                android:text="我的" />
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,7 +1,5 @@
 package com.huatec.hiot_cloud.Test.MvpTest;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,10 +7,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.huatec.hiot_cloud.R;
-import com.huatec.hiot_cloud.Test.MvpTest.dagger2test.DaggerPersenterComponent;
-import com.huatec.hiot_cloud.Test.MvpTest.dagger2test.PersenterComponent;
 import com.huatec.hiot_cloud.Test.MvpTest.modle.User;
-import com.huatec.hiot_cloud.base.EaesActivity;
+import com.huatec.hiot_cloud.UI.base.EaesActivity;
 
 import javax.inject.Inject;
 
@@ -24,7 +20,7 @@ public class MvpTestActivity extends EaesActivity<TestView, TestPresenter> imple
     TestPresenter presenter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        getActivityComponent().inject(this);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mvp_test);
        final EditText evpassword = findViewById(R.id.ev_passworld);
@@ -50,7 +46,12 @@ public class MvpTestActivity extends EaesActivity<TestView, TestPresenter> imple
     public TestPresenter createPresenter() {
         return presenter;
     }
-/*
+
+    @Override
+    public void injectIndependies() {
+        getActivityComponent().inject(this);
+    }
+    /*
 * 创建注入器
 * *//*
     public PersenterComponent getComponent(){
