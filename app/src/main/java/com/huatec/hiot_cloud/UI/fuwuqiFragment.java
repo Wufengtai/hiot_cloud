@@ -10,20 +10,15 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.huatec.hiot_cloud.R;
-import com.huatec.hiot_cloud.Test.MvpTest.TestView;
 import com.huatec.hiot_cloud.UI.base.BaseFragment;
 import com.huatec.hiot_cloud.UI.base.BasePresenter;
 
-/*
-* 设备Fragment
-* */
-public class EquipmentFragment extends BaseFragment {
-
-   /*
-   * 创建fragment实例
-   * */
-    public static EquipmentFragment newInstance(){
-        EquipmentFragment fragment = new EquipmentFragment();
+public class fuwuqiFragment extends BaseFragment {
+    /*
+     * 创建fragment实例
+     * */
+    public static fuwuqiFragment newInstance(){
+        fuwuqiFragment fragment = new fuwuqiFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -37,12 +32,12 @@ public class EquipmentFragment extends BaseFragment {
     public void injectDependencies() {
 
     }
-/*
-* 实现initView方法。。。
-* */
+    /*
+     * 实现initView方法。。。
+     * */
     @Override
     public View initView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-      View view = inflater.inflate(R.layout.fragment_main, container, false);
+        View view = inflater.inflate(R.layout.fragment_main, container, false);
         return view;
     }
 
@@ -50,8 +45,11 @@ public class EquipmentFragment extends BaseFragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+
         TextView tvfragment1 = view.findViewById(R.id.TV_fragment);
-        tvfragment1.setText("设备");
+        tvfragment1.setText("服务器");
+
 
     }
 }

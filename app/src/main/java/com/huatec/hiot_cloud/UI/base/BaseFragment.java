@@ -24,7 +24,7 @@ public abstract class BaseFragment<V extends baseView , P extends BasePresenter<
         View view = initView(inflater, container, savedInstanceState);
         injectDependencies();
         return view;
-        /*return super.onCreateView(inflater, container, savedInstanceState);*/
+
     }
 
     @Override
@@ -36,6 +36,15 @@ public abstract class BaseFragment<V extends baseView , P extends BasePresenter<
         super.onViewCreated(view, savedInstanceState);
     }
 
+
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        if (presenter != null){
+            presenter.destroy();
+        }
+    }
     @Override
     public void onPause() {
         super.onPause();
@@ -44,13 +53,5 @@ public abstract class BaseFragment<V extends baseView , P extends BasePresenter<
     @Override
     public void onResume() {
         super.onResume();
-    }
-
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        if (presenter !=null){
-            presenter.destroy();
-        }
     }
 }

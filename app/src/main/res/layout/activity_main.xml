@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context=".UI.MainActivity">
 
-    <androidx.viewpager.widget.ViewPager
+    <com.huatec.hiot_cloud.widget.NOSlideView
         android:id="@+id/VR_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"

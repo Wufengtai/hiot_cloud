@@ -20,17 +20,20 @@ class MainViewPageAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         Fragment fragment = null;
-        fragment = EquipmentFragment.newInstance();
+
         switch (position) {
             case Contans.MAIN_FRAGMENT_BUTTON1:
                 //创建设备fragment TODO
-               fragment = EquipmentFragment.newInstance();
+                fragment = EquipmentFragment.newInstance();
                 break;
             case Contans.MAIN_FRAGMENT_BUTTON2:
+                fragment = sceneFragment.newInstance();
                 break;
             case Contans.MAIN_FRAGMENT_BUTTON3:
+                fragment = fuwuqiFragment.newInstance();
                 break;
             case Contans.MAIN_FRAGMENT_BUTTON4:
+                fragment = mineFragment.newInstance();
                 break;
             default:
         }
