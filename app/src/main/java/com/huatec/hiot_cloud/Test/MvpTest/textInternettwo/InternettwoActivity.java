@@ -195,7 +195,7 @@ public class InternettwoActivity extends AppCompatActivity {
 
     private void login1() {
         Call<ResponseBody> call = interenttwo.login("wufengtai","wft123456","app");
-//        CallBackGetUserIn(call);
+/*//        CallBackGetUserIn(call);*/
         call.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
