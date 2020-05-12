@@ -1,9 +1,11 @@
 package com.huatec.hiot_cloud.UI;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -11,6 +13,7 @@ import androidx.annotation.Nullable;
 
 import com.huatec.hiot_cloud.R;
 import com.huatec.hiot_cloud.Test.MvpTest.TestView;
+import com.huatec.hiot_cloud.Test.MvpTest.textInternet.TextInterentActivity;
 import com.huatec.hiot_cloud.UI.base.BaseFragment;
 import com.huatec.hiot_cloud.UI.base.BasePresenter;
 
@@ -28,6 +31,7 @@ public class EquipmentFragment extends BaseFragment {
         fragment.setArguments(args);
         return fragment;
     }
+
     @Override
     public BasePresenter createPresenter() {
         return null;
@@ -52,6 +56,8 @@ public class EquipmentFragment extends BaseFragment {
         super.onViewCreated(view, savedInstanceState);
         TextView tvfragment1 = view.findViewById(R.id.TV_fragment);
         tvfragment1.setText("设备");
+
+
 
     }
 }

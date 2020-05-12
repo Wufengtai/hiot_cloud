@@ -4,13 +4,20 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.provider.SyncStateContract;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.RadioGroup;
 
 import com.huatec.hiot_cloud.R;
+import com.huatec.hiot_cloud.Test.MvpTest.Gson.GsonActivity;
+import com.huatec.hiot_cloud.Test.MvpTest.RXJAVA.RxJavaActivity;
+import com.huatec.hiot_cloud.Test.MvpTest.textInternet.TextInterentActivity;
+import com.huatec.hiot_cloud.Test.MvpTest.textInternettwo.InternettwoActivity;
 import com.huatec.hiot_cloud.UI.base.BasePresenter;
 import com.huatec.hiot_cloud.UI.base.EaesActivity;
 import com.huatec.hiot_cloud.utils.Contans;
@@ -44,6 +51,38 @@ public class MainActivity extends EaesActivity {
                         break;
                     default:
                 }
+            }
+        });
+        Button but_Ok = findViewById(R.id.but_OKHttp);
+        but_Ok.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TextInterentActivity.class);
+                startActivity(intent);
+            }
+        });
+        Button but_Gson = findViewById(R.id.but_Gson);
+        but_Gson.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, GsonActivity.class);
+                startActivity(intent);
+            }
+        });
+        Button but_Rxjava= findViewById(R.id.but_Rxjava);
+        but_Rxjava.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, RxJavaActivity.class);
+                startActivity(intent);
+            }
+        });
+        Button but_Retrofit = findViewById(R.id.but_Retrofit);
+        but_Retrofit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, InternettwoActivity.class);
+                startActivity(intent);
             }
         });
     }

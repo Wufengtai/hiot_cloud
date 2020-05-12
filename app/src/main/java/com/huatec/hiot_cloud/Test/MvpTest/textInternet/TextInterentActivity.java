@@ -2,12 +2,15 @@ package com.huatec.hiot_cloud.Test.MvpTest.textInternet;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
 import com.huatec.hiot_cloud.R;
+import com.huatec.hiot_cloud.Test.MvpTest.textInternettwo.InternettwoActivity;
+import com.huatec.hiot_cloud.UI.MainActivity;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -22,11 +25,20 @@ import okhttp3.Response;
 
 public class TextInterentActivity extends AppCompatActivity {
  private static final String HttpUal="http://114.67.88.191:8080";
+    private static final String baiduUal="http://163.177.151.109";
     private static final String TAG = "TextInterentActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_text_interent);
+        Button but1 = findViewById(R.id.but_OKHttp1);
+        but1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TextInterentActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
         Button button = findViewById(R.id.but_ton1);
         Button button1 = findViewById(R.id.but_ton2);
         Button login = findViewById(R.id.login);
@@ -58,7 +70,7 @@ public class TextInterentActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    Login("1440807980","wft147258","app");
+                    Login("wufengtai","wft147258","app");
             }
         });
 
@@ -68,7 +80,7 @@ public class TextInterentActivity extends AppCompatActivity {
         username.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                GetUserInfo("1d0c78a1c22a4086974e68eee5709cdd_642d30f6a24e49c8aa4c847745591627_use");
+                GetUserInfo("1d0c78a1c22a4086974e68eee5709cdd_bbd34243a741432284d4b53322060411_use");
             }
         });
         /*
@@ -77,7 +89,7 @@ public class TextInterentActivity extends AppCompatActivity {
         email.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                UpdateEmail("wft@qq.com","1d0c78a1c22a4086974e68eee5709cdd_642d30f6a24e49c8aa4c847745591627_use");
+                UpdateEmail("wft@qq.com","1d0c78a1c22a4086974e68eee5709cdd_bbd34243a741432284d4b53322060411_use");
             }
         });
     }
@@ -138,7 +150,7 @@ public class TextInterentActivity extends AppCompatActivity {
                     public void run() {
                         super.run();
                         OkHttpClient okHttpClient = new OkHttpClient();
-                        Request request = new Request.Builder().url(HttpUal).build();
+                        Request request = new Request.Builder().url(baiduUal).build();
                         try {
                             Response response = okHttpClient.newCall(request).execute();
                              Log.e(TAG,"run" + response.body().string());
