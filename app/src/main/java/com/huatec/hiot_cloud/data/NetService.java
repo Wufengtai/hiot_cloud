@@ -21,6 +21,7 @@ import retrofit2.http.Query;
 * 网络请求接口
 * */
 public interface NetService {
+    public static final String basurl="http://114.67.88.191:8080";
     @POST("/auth/login")
     Observable<ResultBase<loginResultDto>> login(@Query("username")String username,
                                                  @Query("password")String password, @Query("loginCode")String loginCode);

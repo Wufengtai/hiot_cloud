@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Test.MvpTest.Test.TestNetWorkActivity">
+
+    <Button
+        android:id="@+id/net_but1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="登录"/>
+    <EditText
+        android:id="@+id/net_but2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="用户token"/>
+    <Button
+        android:id="@+id/net_but3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="用户信息"/>
+    <Button
+        android:id="@+id/net_but4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="修改邮箱"/>
+    <Button
+        android:id="@+id/net_but6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="修改密码"/>
+    <Button
+        android:id="@+id/net_but5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="返回到主页"
+        />
+</LinearLayout>
