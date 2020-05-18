@@ -40,6 +40,18 @@
             android:layout_height="wrap_content"
             android:text="点击跳转到Rxjava"
             />
+        <Button
+            android:id="@+id/but_newOk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="点击跳转到优化网络请求框架"
+            />
+        <Button
+            android:id="@+id/but_glide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="点击跳转到Glide页面"
+            />
     </LinearLayout>
 
 

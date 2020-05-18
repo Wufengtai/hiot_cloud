@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Test.MvpTest.TESTPICTURE.TestActivity">
+<Button
+    android:id="@+id/glide_but1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   android:text="图片显示"
+    />
+    <Button
+        android:id="@+id/glide_but3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="使用工具显示图片"
+        />
+    <ImageView
+        android:id="@+id/glide_img1"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        />
+    <Button
+        android:id="@+id/glide_but2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="返回到主页"
+        />
+</LinearLayout>

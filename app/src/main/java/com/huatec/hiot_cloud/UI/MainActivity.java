@@ -16,6 +16,8 @@ import android.widget.RadioGroup;
 import com.huatec.hiot_cloud.R;
 import com.huatec.hiot_cloud.Test.MvpTest.Gson.GsonActivity;
 import com.huatec.hiot_cloud.Test.MvpTest.RXJAVA.RxJavaActivity;
+import com.huatec.hiot_cloud.Test.MvpTest.TESTPICTURE.TestActivity;
+import com.huatec.hiot_cloud.Test.MvpTest.Test.TestNetWorkActivity;
 import com.huatec.hiot_cloud.Test.MvpTest.textInternet.TextInterentActivity;
 import com.huatec.hiot_cloud.Test.MvpTest.textInternettwo.InternettwoActivity;
 import com.huatec.hiot_cloud.UI.base.BasePresenter;
@@ -74,6 +76,22 @@ public class MainActivity extends EaesActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, RxJavaActivity.class);
+                startActivity(intent);
+            }
+        });
+        Button but_glide= findViewById(R.id.but_glide);
+        but_glide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TestActivity.class);
+                startActivity(intent);
+            }
+        });
+        Button but_newint= findViewById(R.id.but_newOk);
+        but_newint.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TestNetWorkActivity.class);
                 startActivity(intent);
             }
         });
