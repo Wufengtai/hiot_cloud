@@ -1,13 +1,11 @@
 package com.huatec.hiot_cloud.UI;
 
-import android.view.View;
-
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.viewpager.widget.PagerAdapter;
 
+import com.huatec.hiot_cloud.UI.mine.mineFragment;
 import com.huatec.hiot_cloud.utils.Contans;
 
 class MainViewPageAdapter extends FragmentPagerAdapter {

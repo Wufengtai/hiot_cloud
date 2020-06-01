@@ -20,6 +20,7 @@ import com.huatec.hiot_cloud.Test.MvpTest.TESTPICTURE.TestActivity;
 import com.huatec.hiot_cloud.Test.MvpTest.Test.TestNetWorkActivity;
 import com.huatec.hiot_cloud.Test.MvpTest.textInternet.TextInterentActivity;
 import com.huatec.hiot_cloud.Test.MvpTest.textInternettwo.InternettwoActivity;
+import com.huatec.hiot_cloud.UI.Login.LoginActivity;
 import com.huatec.hiot_cloud.UI.base.BasePresenter;
 import com.huatec.hiot_cloud.UI.base.EaesActivity;
 import com.huatec.hiot_cloud.utils.Contans;
@@ -55,54 +56,62 @@ public class MainActivity extends EaesActivity {
                 }
             }
         });
-        Button but_Ok = findViewById(R.id.but_OKHttp);
-        but_Ok.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, TextInterentActivity.class);
-                startActivity(intent);
-            }
-        });
-        Button but_Gson = findViewById(R.id.but_Gson);
-        but_Gson.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, GsonActivity.class);
-                startActivity(intent);
-            }
-        });
-        Button but_Rxjava= findViewById(R.id.but_Rxjava);
-        but_Rxjava.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, RxJavaActivity.class);
-                startActivity(intent);
-            }
-        });
-        Button but_glide= findViewById(R.id.but_glide);
-        but_glide.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, TestActivity.class);
-                startActivity(intent);
-            }
-        });
-        Button but_newint= findViewById(R.id.but_newOk);
-        but_newint.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, TestNetWorkActivity.class);
-                startActivity(intent);
-            }
-        });
-        Button but_Retrofit = findViewById(R.id.but_Retrofit);
-        but_Retrofit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, InternettwoActivity.class);
-                startActivity(intent);
-            }
-        });
+//        Button but_Ok = findViewById(R.id.but_OKHttp);
+//        but_Ok.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(MainActivity.this, TextInterentActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+//        Button but_Gson = findViewById(R.id.but_Gson);
+//        but_Gson.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(MainActivity.this, GsonActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+//        Button but_fing = findViewById(R.id.but_fing);
+//        but_fing.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+//        Button but_Rxjava= findViewById(R.id.but_Rxjava);
+//        but_Rxjava.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(MainActivity.this, RxJavaActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+//        Button but_glide= findViewById(R.id.but_glide);
+//        but_glide.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(MainActivity.this, TestActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+//        Button but_newint= findViewById(R.id.but_newOk);
+//        but_newint.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(MainActivity.this, TestNetWorkActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+//        Button but_Retrofit = findViewById(R.id.but_Retrofit);
+//        but_Retrofit.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(MainActivity.this, InternettwoActivity.class);
+//                startActivity(intent);
+//            }
+//        });
     }
 
     @Override

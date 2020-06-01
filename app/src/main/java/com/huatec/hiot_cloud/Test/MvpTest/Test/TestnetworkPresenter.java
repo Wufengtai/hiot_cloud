@@ -32,7 +32,7 @@ public class TestnetworkPresenter extends BasePresenter<TestNetworkPaceView> {
     }
 
     public  void username(String authorization){
-        subscrib(dataManager.username(authorization), new RequestCallback<ResultBase<UserBean>>() {
+        subscrib(dataManager.username(), new RequestCallback<ResultBase<UserBean>>() {
             @Override
             public void onNext(ResultBase<UserBean> resultBase) {
                 if (resultBase != null && resultBase.getData() != null) {
@@ -46,7 +46,7 @@ public class TestnetworkPresenter extends BasePresenter<TestNetworkPaceView> {
         });
     }
     public void  email(String newemail, String authorization){
-        subscrib(dataManager.email(newemail, authorization), new RequestCallback<ResultBase<String>>() {
+        subscrib(dataManager.email(newemail), new RequestCallback<ResultBase<String>>() {
             @Override
             public void onNext(ResultBase<String> resultBase) {
                 if (resultBase != null && resultBase.getData() != null) {
@@ -60,7 +60,7 @@ public class TestnetworkPresenter extends BasePresenter<TestNetworkPaceView> {
     }
 
     public void password(String newpassword, String oldpassword, String confirmpassword, String authorization){
-        subscrib(dataManager.password(newpassword,oldpassword, confirmpassword, authorization), new RequestCallback<ResultBase<String>>() {
+        subscrib(dataManager.password(newpassword,oldpassword, confirmpassword), new RequestCallback<ResultBase<String>>() {
             @Override
             public void onNext(ResultBase<String> resultBase) {
                 if (resultBase != null && resultBase.getData() != null) {

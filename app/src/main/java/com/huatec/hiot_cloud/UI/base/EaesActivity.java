@@ -2,6 +2,7 @@ package com.huatec.hiot_cloud.UI.base;
 
 import android.app.Application;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -39,8 +40,9 @@ public abstract class EaesActivity<V extends baseView , P extends BasePresenter<
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        presenter.destroy();
-
+        if (presenter != null) {
+            presenter.destroy();
+        }
     }
 
     @Override
@@ -81,5 +83,10 @@ public abstract class EaesActivity<V extends baseView , P extends BasePresenter<
      */
     protected ActivityModule getActivityModule() {
         return new ActivityModule(this);
+    }
+
+    @Override
+    public void showManager(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 }

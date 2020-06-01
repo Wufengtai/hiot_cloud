@@ -15,10 +15,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoAction">
-        <activity android:name=".Test.MvpTest.TESTPICTURE.TestActivity"></activity>
-        <activity android:name=".Test.MvpTest.Test.TestNetWorkActivity">
-
-        </activity>
+        <activity android:name=".UI.zhuce.ZhuceActivity"></activity>
+        <activity android:name=".Test.MvpTest.TESTPICTURE.TestActivity" />
+        <activity android:name=".UI.Login.LoginActivity" />
+        <activity android:name=".Test.MvpTest.Test.TestNetWorkActivity"></activity>
         <activity android:name=".Test.MvpTest.RXJAVA.RxJavaActivity" />
         <activity android:name=".Test.MvpTest.Gson.GsonActivity" />
         <activity android:name=".Test.MvpTest.textInternettwo.InternettwoActivity" />

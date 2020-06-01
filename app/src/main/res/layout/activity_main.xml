@@ -12,47 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <Button
-            android:id="@+id/but_OKHttp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="点击跳转到第一种方法OKHttp"
-            />
-        <Button
-            android:id="@+id/but_Retrofit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="点击跳转到第二种方法Retrofit"
-            />
-        <Button
-            android:id="@+id/but_Gson"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="点击跳转到Gson方法Retrofit"
-            />
-        <Button
-            android:id="@+id/but_Rxjava"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="点击跳转到Rxjava"
-            />
-        <Button
-            android:id="@+id/but_newOk"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="点击跳转到优化网络请求框架"
-            />
-        <Button
-            android:id="@+id/but_glide"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="点击跳转到Glide页面"
-            />
-    </LinearLayout>
+
 
 
     <LinearLayout

@@ -9,6 +9,8 @@ public class UserBean implements Serializable {
     private String email;
     private String password;
     private String userType;
+   //相对路径
+    private String img;
 
 
     public String getUsername() {
@@ -41,5 +43,13 @@ public class UserBean implements Serializable {
 
     public void setUserType(String userType) {
         this.userType = userType;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 }
